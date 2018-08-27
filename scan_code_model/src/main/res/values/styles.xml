@@ -1,0 +1,10 @@
+<resources>
+
+
+    <!-- Application theme. -->
+    <style name="ScanNoActionBarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:listDivider">@drawable/divider</item>
+        <item name="colorAccent">@color/scan_code_viewfinder_mask</item>
+        <item name="android:windowBackground">@color/scan_code_transparent</item>
+    </style>
+</resources>

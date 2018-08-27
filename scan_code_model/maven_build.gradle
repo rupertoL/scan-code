@@ -1,0 +1,27 @@
+/**
+ * 如果使用maven管理模块请在模块的build.gradle中加入“apply from: './maven_build.gradle'”
+ */
+apply plugin: 'maven'
+def cfg = rootProject.ext.nexus_manve_configuration // 配置
+uploadArchives {
+    repositories {
+        mavenDeployer {
+
+            repository(url: cfg.MAVEN_URL) {
+                authentication(userName: cfg.NEXUS_USERNAME, password: cfg.NEXUS_PASSWORD)
+            }
+            pom.project {
+                //引用时使用如下格式： implementation 'groupId:artifactId:version'
+                //版本，有更新时修改版本号，在上传
+                version cfg.MAVEN_update_version
+                //模块名字（每个模块不一样）
+                artifactId 'scan_code'
+                //项目路径（尽量保持最后一级不一样）
+                groupId cfg.MAVEN_groupId
+                //默认配置不用修改
+                packaging cfg.MAVEN_packaging_Type
+                description cfg.MAVEN_description
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--扫描-->
+    <color name="scan_code_viewfinder_mask">#60000000</color>
+    <color name="scan_code_result_view">#b0000000</color>
+    <color name="scan_code_possible_result_points">#c0ffff00</color>
+    <color name="scan_code_possible_result_points_transparency">#fdf4cc</color>
+    <color name="scan_code_transparent">#00000000</color>
+    <color name="scan_code_ewm_touming">#44000000</color>
+    <color name="scan_code_my_greed">#00A30B</color>
+    <color name="scan_code_white">#ffffff</color>
+    <color name="divider">#d9d9d9</color>
+
+</resources>

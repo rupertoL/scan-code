@@ -1,0 +1,8 @@
+<resources>
+    <string name="qr_code_auto_scan_notification">将条形码放入框内，即可自动扫描</string>
+    <string name="scan_code_qr_code_notification">提示</string>
+    <string name="qr_code_positive_button_confirm">确认</string>
+    <string name="qr_code_could_not_read_qr_code_from_scanner">对不起，无法打开扫出的内容</string>
+    <string name="qr_code_camera_not_found">未检测到相机</string>
+    <string name="qc_code_close">关闭</string>
+</resources>

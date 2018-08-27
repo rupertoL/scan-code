@@ -1,0 +1,39 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+//apply from: "maven_config.gradle"
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+        flatDir {
+            dirs 'libs' ,"../app/libs"  // aar目录
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.0'
+        //classpath "gradle.plugin.me.lucas:fat-aar-plugin:1.0.9"
+        // tinker support插件
+        classpath "com.tencent.bugly:tinker-support:1.1.1"
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+        classpath "com.alibaba:arouter-register:1.0.2"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "http://maven.shoppingyizhan.com/content/repositories/android/" }
+        maven { url "https://jitpack.io" }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

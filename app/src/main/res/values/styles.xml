@@ -1,0 +1,8 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="ScanNoActionBarTheme">
+        <item name="android:listDivider">@drawable/divider</item>
+        <item name="android:windowBackground">@color/divider</item>
+    </style>
+</resources>

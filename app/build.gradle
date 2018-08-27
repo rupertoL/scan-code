@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "cn.shequren.lp"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "cn.shequren.lp",
+                JSHARE_PKGNAME: "cn.shequren.lp",
+                JPUSH_APPKEY  : "5a84cc34dfdf8377b5140734",      //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "shequren",
+                TENCENT_APPID : "1106032067",
+                MAP_VALUE     : "a7dbd2c347e0bb212f63c86a8306844f",         // 高德地图定位
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'   // aar目录
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api project(':scan_code_model')
+}

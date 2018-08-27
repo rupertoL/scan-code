@@ -1,0 +1,18 @@
+/**
+ * 如果使用mavan管理模块请在根build.gradle中引入该配置文件
+ */
+ext {
+    nexus_manve_configuration = [
+            MAVEN_URL           : "http://localhost:8081/repository/maven-releases/base/",
+            NEXUS_USERNAME      : "admin",
+            NEXUS_PASSWORD      : "admin123",
+            MAVEN_groupId       : "ex.lp.cn",
+            MAVEN_packaging_Type: "aar",
+            MAVEN_description   : "dependences lib",
+
+            MAVEN_version       : "1.0.2",
+            MAVEN_update_version: "1.0.2",
+
+
+    ]
+}

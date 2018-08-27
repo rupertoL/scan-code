@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cn.shequren.scancode">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application>
+        <activity
+            android:name="cn.shequren.scancode.newscan.ScanCodeNewActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ScanNoActionBarTheme"
+            >
+
+        </activity>
+
+    </application>
+</manifest>

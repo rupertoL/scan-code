@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="false">
+
+
+    <ViewStub
+        android:id="@+id/qr_code_view_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+
+        />
+
+
+    <cn.shequren.scancode.view.QrCodeFinderView
+        android:id="@+id/qr_code_view_finder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/title_root"
+        layout="@layout/scan_code_layout_topbar"
+        />
+
+    <View
+        android:id="@+id/qr_code_view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_root"
+        android:background="@android:color/black"
+        android:visibility="gone"/>
+
+
+    <CheckBox
+        android:id="@+id/btn_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:button="@drawable/scan_flashlight_selector"
+        android:checked="false"
+        android:scaleX="2"
+        android:scaleY="2"
+        />
+</RelativeLayout>
