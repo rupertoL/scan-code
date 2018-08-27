@@ -85,11 +85,11 @@ public class ScanCodeMangerUtils {
         mPref = PreferenceManager.getDefaultSharedPreferences(mContext);
     }
 
-    protected Context getContext() {
+    public Context getContext() {
         return mContext;
     }
 
-    protected void putDdata(String key, Object object) {
+    public void putDdata(String key, Object object) {
         if (mPref == null) {
             mPref = PreferenceManager.getDefaultSharedPreferences(mContext);
         }
@@ -112,7 +112,7 @@ public class ScanCodeMangerUtils {
 
     }
 
-    protected Object getData(String key, Object object) {
+    public Object getData(String key, Object object) {
         if (mPref == null) {
             mPref = PreferenceManager.getDefaultSharedPreferences(mContext);
         }
