@@ -30,4 +30,5 @@
      * @param code            请求响应码（请求响应码相同）
      * @param needCahangPager 切换算法
      */
-	 ScanCodeMangerUtils.newInstance().startIntent(final Activity activity, final ScanCodeMode scanCodeMode, final int code, final boolean needCahangPager);
+	 ScanCodeMangerUtils.newInstance().startIntent(final Activity activity, 
+	 final ScanCodeMode scanCodeMode, final int code, final boolean needCahangPager);
