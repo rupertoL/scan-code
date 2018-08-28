@@ -24,10 +24,10 @@
       Manifest.permission.WRITE_EXTERNAL_STORAGE
       Manifest.permission.READ_EXTERNAL_STORAGE
       Manifest.permission.CAMERA
- /**
+		 /**
      * @param activity        需要启动的页面Activity
      * @param scanCodeMode    扫描模式（条形码, 二维码）
      * @param code            请求响应码（请求响应码相同）
      * @param needCahangPager 切换算法
      */
- ScanCodeMangerUtils.newInstance().startIntent(final Activity activity, final ScanCodeMode scanCodeMode, final int code, final boolean needCahangPager);
+	 ScanCodeMangerUtils.newInstance().startIntent(final Activity activity, final ScanCodeMode scanCodeMode, final int code, final boolean needCahangPager);
