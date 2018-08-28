@@ -27,8 +27,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.google.gson.Gson;
-
 import cn.shequren.scancode.CameraConfig;
 import cn.shequren.scancode.DensityUtil;
 import cn.shequren.scancode.R;
@@ -377,15 +375,12 @@ public final class QrCodeFinderView extends RelativeLayout {
         mHandler.removeMessages(1);
     }
 
-    Gson mGson = null;
 
     private void saveUserChose(Rect rect) {
         boolean type = ScanCodeMangerUtils.newInstance().mType;
         if (type) {
-            if (mGson == null) {
-                mGson = new Gson();
-            }
-            String Data = mGson.toJson(rect);
+
+            String Data =ScanCodeMangerUtils.newInstance().getGson().toJson(rect);
             ScanCodeMangerUtils.newInstance().putDdata(CameraConfig.SCAN_RECT_SIZE, Data);
         }
     }
@@ -398,10 +393,7 @@ public final class QrCodeFinderView extends RelativeLayout {
 
             String Data = (String) ScanCodeMangerUtils.newInstance().getData(CameraConfig.SCAN_RECT_SIZE, "");
             if (!TextUtils.isEmpty(Data)) {
-                if (mGson == null) {
-                    mGson = new Gson();
-                }
-                returnData = mGson.fromJson(Data, Rect.class);
+                returnData = ScanCodeMangerUtils.newInstance().getGson().fromJson(Data, Rect.class);
             }
         }
         return returnData;

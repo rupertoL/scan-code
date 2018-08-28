@@ -11,6 +11,8 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import cn.shequren.scancode.newscan.ScanCodeNewActivity;
 
 /**
@@ -42,12 +44,17 @@ public class ScanCodeMangerUtils {
     private boolean isRunning = false;
 
     public String resultDdataType = "data";
+
+    public int requestCode = 905;
+    public int resultCode = 906;
+
     /**
      * 需要的权限
      */
     String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.CAMERA};
+    private Gson mGson;
 
     public void setRunning(boolean running) {
         isRunning = running;
@@ -168,7 +175,7 @@ public class ScanCodeMangerUtils {
 
     }
 
-    protected boolean checkMorePermission() {
+    public boolean checkMorePermission() {
         boolean isAllCheck = false;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             for (int i = 0; i < permissions.length; i++) {
@@ -205,5 +212,13 @@ public class ScanCodeMangerUtils {
      */
     public void startIntent(final Activity activity, final ScanCodeMode scanCodeMode, final int Code) {
         startIntent(activity, scanCodeMode, Code, false);
+    }
+
+    public Gson getGson() {
+        if (mGson == null) {
+            mGson = new Gson();
+        }
+
+        return mGson;
     }
 }

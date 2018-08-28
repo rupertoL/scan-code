@@ -5,66 +5,13 @@
  */
 ext {
     configuration = [
-            package          : "cn.shequren.lp",
             buildToolsVersion: "27.0.3",
             compileVersion   : 27,
             minSdk           : 16,
             targetSdk        : 25,
-            version_code     : 60,
-            version_name     : "4.0.0",
-            mapAppKey        : "a7dbd2c347e0bb212f63c86a8306844f",
-            jPushAppKey      : "5a84cc34dfdf8377b5140734",
-            qq_appId         : "1106032067"
+            version_code     : 2,
+            version_name     : "1.0.1",
+
     ]
 
-    url = [
-//    "debug"           : "http://10.41.0.29:8080/index.php/api/",
-"debug"          : "http://qyg.shoppingyizhan.com/index.php/api/",
-"release"        : "https://qyg.shequren.cn/index.php/api/",
-"debugCurrency"  : "http://api.shoppingyizhan.com/sqr-stag/",
-"releaseCurrency": "https://api.shequren.cn/sqr-stag/",
-"loginPath"      : "/Express_LoginModule/activity/express_login",
-    ]
-
-    libraries = [
-            supportVersion    : "27.1.1",
-            banner            : "2.0.5",
-            banner1           : "1.4.10",
-            crashreport       : "2.3.1",
-            jpush             : "3.1.5",
-            jcore             : "1.2.3",
-            janalytics        : "1.2.1",
-            jshare            : "1.5.0",
-            leakcanary        : "1.5.4",
-            wechat            : "1.3.5",
-            retrofit          : "2.4.0",
-            okhttp            : "3.10.0",
-            rxandroid         : "2.0.2",
-            rxjava            : "2.1.13",
-            butterknife       : "8.8.1",
-            glide             : "4.7.1",
-            xlog              : "1.4.0",
-            greendao          : "3.2.2",
-            androideventbus   : "1.0.5.1",
-            okio              : "1.14.0",
-            systembartint     : "1.0.4",
-            multidex          : "1.0.3",
-            qmui              : "1.1.5",
-            gson              : "2.8.2",
-            banner2           : "1.4.10",
-            bugly_upgrade     : "1.3.5",
-            bugly_native      : "3.3.1",
-            tinker            : "1.9.8",
-            vlayout           : "1.2.17@aar",
-            countdown         : "2.1.6",
-            rxPay             : "v1.0.7",
-            disklrucache      : "2.0.2",
-            constraint        : "1.0.2",
-            arouter_compiler  : "1.2.1",
-            arouter_api       : "1.4.0",
-            arouter_annotation: "1.0.6",
-            saber             : "0.2.0",
-            express_version   : "1.0.0",
-            base_version      : "1.0.0"
-    ]
 }
